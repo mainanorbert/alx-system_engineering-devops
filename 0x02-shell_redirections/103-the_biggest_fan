@@ -1,2 +1,2 @@
 #!/bin/bash
-
+tail -n +2 web_server_logs.tsv | cut -f -1 | sort | uniq -c | sort -rnk 1 | head -n 11 | awk '{print $2}'
