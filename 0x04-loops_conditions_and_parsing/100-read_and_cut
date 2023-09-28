@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-# displaying the contents of /etc/passwd.
-#displays only username, password, and home directory
+# displaying the contents of /etc/passwd displays only username, password, and home directory
+
 while read passwd
 do
 	echo "$passwd" | cut -d ':' -f1,3,6
-done < "/etc/passwd"
+done <"/etc/passwd"
