@@ -3,10 +3,9 @@
 
 h=0
 min=1
-
 while [ $h -le 12 ]
 do
-	echo "hour $h"
+	echo "Hour: $h"
 	(( h++ ))
 	min=1
 	while [ $min -le 59 ]
