@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Displaying process if of this script
+echo "$$"
