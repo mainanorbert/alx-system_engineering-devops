@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-"displaying text infinitely"
+# displaying text infinitely
 
 while true
 do
