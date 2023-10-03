@@ -1,6 +1,5 @@
 # Regular Expression
-
-### This project is all about regular expression in programming.Regular expressions, often abbreviated as "regex" or "regexp," are powerful and flexible patterns used for matching strings or patterns within text. They are a fundamental tool in computer science and text processing. The primary purpose of regular expressions is to search, match, and manipulate text based on specific patterns.
+This project is all about regular expression in programming.Regular expressions, often abbreviated as "regex" or "regexp," are powerful and flexible patterns used for matching strings or patterns within text. They are a fundamental tool in computer science and text processing. The primary purpose of regular expressions is to search, match, and manipulate text based on specific patterns.
 ## Why Regular Expression
 1. `Pattern Matching:` Regular expressions provide a standardized and efficient way to search for and match patterns within text or data. This is essential for tasks like data validation, text extraction, and searching within large datasets. Without regex, these tasks would be more cumbersome and error-prone.
 2. `Text Processing:` Regex is a fundamental tool for text processing and manipulation. It allows developers to perform complex operations on text, such as searching and replacing specific patterns, splitting text into tokens, and filtering data based on patterns. Many text editors and scripting languages support regex for these purposes.
