@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 # Displaying listening ports
 # only shows listening sockets
 # shows PID and name of program for each socket
