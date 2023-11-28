@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # using apache to run on container and return message
-echo "ServerName localhost" >> /etc/apache2.conf
+echo "Hello Holberton" >> /etc/apache2.conf
 service apache2 start
