@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-# displaying currently running processes
-
-ps -uafx
