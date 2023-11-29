@@ -1,4 +1,4 @@
- # Puppet file that creates a file
+ # Puppet creating a  file that creates a file
  
 file { '/tmp/school/':
   ensure  => 'file',
@@ -6,4 +6,4 @@ file { '/tmp/school/':
   owner   => 'www-data',
   group   => 'www-data',
   content => 'I love Puppet'
-}
+
