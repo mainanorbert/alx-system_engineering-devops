@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#  creates an RSA key pair with 4096 bits
+# key is protected by passphrase betty and be call schoolr
+ssh-keygen -t rsa -b 4096 -f school -N betty
