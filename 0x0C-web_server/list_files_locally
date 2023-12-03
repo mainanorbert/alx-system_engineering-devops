@@ -1,0 +1,2 @@
+# listing files in remote server locally
+ssh ubuntu@18.234.130.101 -i ~/.ssh/id_rsa 'ls ~/'
