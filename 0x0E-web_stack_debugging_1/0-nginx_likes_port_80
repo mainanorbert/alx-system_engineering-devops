@@ -1,5 +1,15 @@
 #!/usr/bin/env bash
 # script that debugs nginx to port 80
 
+apt-get -y update
+apt-get -y install nginx
 ufw allow 'Nginx HTTP'
+echo "Hello World!" > /var/www/html/index.html
+printf %s "server {
+     listen      80 default_server;
+     listen      [::]:80 default_server;
+     root        /var/www/html;
+     index       index.html index.htm;
+}
+" > /etc/nginx/sites-available/default
 service nginx restart
