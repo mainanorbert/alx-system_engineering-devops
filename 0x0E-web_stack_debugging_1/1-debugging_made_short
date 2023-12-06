@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# configuring nginx optimally
+sed -i "10i server {\nlisten 80 default_server;\nlisten  [::]:80 default_server;\nroot /var/www/html;\nindex index.html index.htm;\n}" /etc/nginx/sites-available/default
+service nginx restart
+
