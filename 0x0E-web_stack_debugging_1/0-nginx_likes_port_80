@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# script that debugs nginx to port 80
+
+ufw allow 'Nginx HTTP'
+service nginx restart
