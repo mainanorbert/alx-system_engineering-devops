@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# Fixes a web server to run Nginx as the nginx user listening on port 8080.
+
+# Change the user in the Nginx configuration file from www-data to nginx
+sed -i "s/#user www-data/user nginx/g" /etc/nginx/nginx.conf
+
+# Change the default port from 80 to 8080 in the default Nginx site configuration
+sed -i "s/80/8080/g" /etc/nginx/sites-available/default
+
+# Set the permissions of the Nginx configuration file to 644
+chmod 644 /etc/nginx/nginx.conf
+
+# Stop the Apache2 service (if running) using pkill
+pkill apache2
+
+# Start the Nginx service as the nginx user
+sudo -u nginx service nginx start
