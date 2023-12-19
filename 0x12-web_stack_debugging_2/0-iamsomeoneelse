@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
-# Who Am I command command with argument passed as user
+# runs whoami command under specified user
 sudo -u "$1" whoami
