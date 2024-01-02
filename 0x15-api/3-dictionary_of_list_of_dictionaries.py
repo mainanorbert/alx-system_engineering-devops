@@ -12,7 +12,7 @@ if __name__ == "__main__":
             user.get("id"): [{
                 "username": user.get("username"),
                 "task": task.get("title"),
-                "complete": task.get("completed"),
+                "completed": task.get("completed"),
             } for task in requests.get(
                                        f"{base_url}/todos",
                                        params={
