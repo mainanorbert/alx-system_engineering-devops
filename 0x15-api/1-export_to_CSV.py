@@ -5,7 +5,8 @@ import sys
 import csv
 
 
-def employee_todo_progress(employee_id):
+if __name__ == "__main__":
+    employee_id = int(sys.argv[1])
     base_url = "https://jsonplaceholder.typicode.com/users"
     todo_url = f"{base_url}/{employee_id}/todos"
     user_url = f"{base_url}/{employee_id}"
@@ -19,8 +20,3 @@ def employee_todo_progress(employee_id):
         writer = csv.writer(f, quoting=csv.QUOTE_ALL)
         [writer.writerow([employee_id, username, task.get("completed"),
                           task.get('title')]) for task in todo_data]
-
-
-if __name__ == "__main__":
-    employee_id = int(sys.argv[1])
-    employee_todo_progress(employee_id)
