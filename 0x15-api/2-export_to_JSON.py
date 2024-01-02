@@ -1,24 +1,25 @@
 #!/usr/bin/python3
-"""using REST API to return csv file for given employee details"""
+"""using RESR API to return TO DO LIST for given employee"""
 import requests
 import sys
-import csv
+import json
 
 
 def employee_todo_progress(employee_id):
     base_url = "https://jsonplaceholder.typicode.com/users"
     todo_url = f"{base_url}/{employee_id}/todos"
     user_url = f"{base_url}/{employee_id}"
+    
+    # fetching user data
     user_data = requests.get(user_url).json()
-    # user_id = user_data.get("id")
-    username = user_data.get('username')
+    
+    # fetching user todo work
     todo_data = requests.get(todo_url).json()
-
-    file_name = f"{employee_id}.csv"
-    with open(file_name, 'w', newline="") as f:
-        writer = csv.writer(f, quoting=csv.QUOTE_ALL)
-        [writer.writerow([employee_id, username, task.get("completed"),
-                          task.get('title')]) for task in todo_data]
+    
+    file_name = f"{employee_id}.json"
+    my_data = {employee_id: [{"task": task["title"], "completed": task["completed"], "username": task["username"]} for task in todo_data]}
+    with open(file_name, m="w") as f:
+        json.dump(my_data, f)
 
 
 if __name__ == "__main__":
