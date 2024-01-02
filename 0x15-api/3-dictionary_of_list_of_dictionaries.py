@@ -1,9 +1,7 @@
 #!/usr/bin//python3
-"""Recording all tasks from all employees"""
-
+"""Recording all tasks from all employees and saves to json file"""
 import json
 import requests
-import sys
 
 
 if __name__ == "__main__":
@@ -12,9 +10,9 @@ if __name__ == "__main__":
     with open("todo_all_employees.json", "w") as f:
         json.dump({
             user.get("id"): [{
+                "username": user.get("username"),
                 "task": task.get("title"),
                 "complete": task.get("completed"),
-                "username": user.get("username")
             } for task in requests.get(
                                        f"{base_url}/todos",
                                        params={
