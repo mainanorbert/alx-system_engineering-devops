@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-"""using RESR API to return TO DO LIST for given employee"""
+"""using REST API to return TO DO LIST for given employee"""
+import json
 import requests
 import sys
-import json
 
 
 if __name__ == "__main__":
-    employee_id = int(sys.argv[1])
+    employee_id = sys.argv[1]
     base_url = "https://jsonplaceholder.typicode.com/users"
     todo_url = f"{base_url}/{employee_id}/todos"
     user_url = f"{base_url}/{employee_id}"
