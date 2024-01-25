@@ -1,6 +1,6 @@
 # increasing traffic in nginx
 exec { 'fixing-nginx':
-  command => 'sed -i "s/15/3096" /etc/defualt/nginx',
+  command => 'sudo sed -i \`s/15/3096/\` /etc/defualt/nginx',
   path    => "/usr/bin/bin/:/bin/"
 } ->
 
