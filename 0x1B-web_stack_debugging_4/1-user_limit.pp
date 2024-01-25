@@ -8,7 +8,7 @@ exec { 'increase file limit':
 }
 
 # increase soft limit
-exec { 'increase file limit:
+exec { 'increase file limit':
   command => 'sed -i "/holberton soft/s/4/50000/" /etc/security/limits.conf',
   path => '/usr/local/bin/:/bin/'
 }
